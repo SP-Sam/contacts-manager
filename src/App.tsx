@@ -6,7 +6,7 @@ import { LoginPage } from './pages/LoginPage';
 
 function App() {
   return (
-    <>
+    <div className="h-screen">
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
@@ -19,7 +19,7 @@ function App() {
           element={<ChangeContacts operation="update" />}
         />
       </Routes>
-    </>
+    </div>
   );
 }
 
