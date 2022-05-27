@@ -33,12 +33,10 @@ export function LoginForm() {
 
     login(userCredentials)
       .then(res => {
-        const tokenInfos = res;
-
-        localStorage.setItem('tokenData', JSON.stringify(tokenInfos));
+        localStorage.setItem('tokenData', JSON.stringify(res));
         navigate('/contacts');
       })
-      .catch(err => setInvalidCredentials(true));
+      .catch(_err => setInvalidCredentials(true));
   }
 
   return (
