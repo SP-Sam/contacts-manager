@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ContactsContext } from '../../context/UserContext';
-import ContactTableRow from './ContactTableRow';
+import { ContactTableRow } from './ContactTableRow';
 import chevronDown from '/assets/chevron-down.svg';
 
 export function ContactsTable() {

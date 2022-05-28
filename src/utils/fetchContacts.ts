@@ -9,3 +9,11 @@ export async function getContacts(token: string) {
     }
   }).then(res => res.data);
 }
+
+export async function deleteContact(id: number, token: string) {
+  return axios.delete(`${CONTACTS_ENDPOINT}/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }).then(res => res.data);
+}
