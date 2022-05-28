@@ -53,7 +53,10 @@ export function ContactsPage() {
             Listagem de contatos
           </h1>
 
-          <button className="bg-feedback-focus-dark text-white rounded-lg px-6 py-4 hover:bg-[#2c4cd1] transition duration-100">
+          <button
+            onClick={() => navigate('/contacts/create')}
+            className="bg-feedback-focus-dark text-white rounded-lg px-6 py-4 hover:bg-[#2c4cd1] transition duration-100"
+          >
             Adicionar novo contato
           </button>
         </div>
