@@ -4,3 +4,9 @@ export interface IContact {
   mobile: string;
   email: string;
 }
+
+export interface INewContact {
+  name: string;
+  email: string;
+  mobile: string;
+}
