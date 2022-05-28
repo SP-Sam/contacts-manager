@@ -1,12 +1,17 @@
-import { createContext, } from 'react';
+import { createContext, Dispatch, SetStateAction } from 'react';
+import { IContact } from '../interfaces/ContactsInterfaces';
 
-// type PropsUserContext = {
-//   isLogged: boolean;
-//   setIsLogged: Dispatch<SetStateAction<boolean>>;
-// };
+type PropsContactsContext = {
+  contacts: IContact[];
+  setContacts: Dispatch<SetStateAction<IContact[]>>;
+};
 
-const DEFAULT_VALUE = {};
+const DEFAULT_VALUE = {
+  contacts: [],
+  setContacts: () => { }
+};
 
-const UserContext = createContext(DEFAULT_VALUE);
+const ContactsContext = createContext<PropsContactsContext>(DEFAULT_VALUE);
 
-export { UserContext };
+export { ContactsContext };
+

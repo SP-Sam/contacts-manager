@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { App } from './App';
-import { UserProvider } from './context/UserProvider';
+import { ContactsProvider } from './context/ContactsProvider';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <UserProvider>
+      <ContactsProvider>
         <App />
-      </UserProvider>
+      </ContactsProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );
