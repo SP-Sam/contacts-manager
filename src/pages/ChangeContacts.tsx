@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { CreateContactForm } from '../components/contacts/CreateContactForm';
 import { EditContactForm } from '../components/contacts/EditContactForm';
 import { Header } from '../components/Header';
@@ -7,6 +8,14 @@ interface Props {
 }
 
 export function ChangeContacts({ operation }: Props) {
+  useEffect(() => {
+    if (operation === 'create') {
+      document.title = 'Cadastrar contato | Contacts Manager';
+    } else {
+      document.title = 'Editar contato | Contacts Manager';
+    }
+  }, []);
+
   return (
     <div className="bg-primary-bg h-full flex flex-col items-center">
       <Header />

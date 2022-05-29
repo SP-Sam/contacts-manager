@@ -16,6 +16,7 @@ export function LoginPage() {
           className="mt-12 sm:m-0 w-3/4 sm:w-11/12 max-w-lg"
         />
       </div>
+
       <div className="w-full flex flex-col items-center sm:w-1/2">
         <div className="flex flex-col items-center mt-4">
           <h1 className="text-3xl text-[#244677] font-bold">Bem-vindo!</h1>
@@ -23,6 +24,7 @@ export function LoginPage() {
             Faça login para acessar nossa plataforma
           </p>
         </div>
+
         <LoginForm />
       </div>
     </div>

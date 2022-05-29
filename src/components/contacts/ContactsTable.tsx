@@ -63,6 +63,3 @@ export function ContactsTable() {
     </table>
   );
 }
-
-// <div className="">
-// </div>

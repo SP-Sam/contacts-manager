@@ -15,6 +15,7 @@ export function EditContactForm() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   useEffect(() => {
+    document.title = 'Editar contato | Contacts Manager';
     setContactName(contactToEdit.name);
     setContactEmail(contactToEdit.email);
     setContactMobile(contactToEdit.mobile);

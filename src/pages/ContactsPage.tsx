@@ -7,12 +7,11 @@ import { getContacts } from '../utils/fetchContacts';
 import { getLocalStorage } from '../utils/manageLocalStorage';
 
 export function ContactsPage() {
-  const navigate = useNavigate();
   const { setContacts } = useContext(ContactsContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    verifyLogin();
-
+    document.title = 'Contacts Manager';
     const tokenData = getLocalStorage('tokenData');
 
     if (tokenData) {
@@ -30,18 +29,6 @@ export function ContactsPage() {
       });
     }
   }, []);
-
-  function verifyLogin(): void {
-    const tokenData = getLocalStorage('tokenData');
-
-    if (tokenData === null) {
-      navigate('/');
-    } else {
-      const { expires_at } = tokenData;
-
-      if (Date.parse(expires_at) < Date.now()) navigate('/');
-    }
-  }
 
   return (
     <div className="bg-primary-bg flex flex-col items-center">
