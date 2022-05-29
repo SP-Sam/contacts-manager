@@ -28,12 +28,10 @@ export function CreateContactForm() {
   }
 
   function handleSubmit() {
-    const formattedMobile = formatMobile(contactMobile);
-
     const newContact = {
       name: contactName,
       email: contactEmail,
-      mobile: formattedMobile,
+      mobile: contactMobile,
     };
 
     const tokenData = getLocalStorage('tokenData');
@@ -47,14 +45,6 @@ export function CreateContactForm() {
         setContactMobile('');
       })
       .catch(err => console.log(err));
-  }
-
-  function formatMobile(email: string): string {
-    const part1 = email.slice(0, 2);
-    const part2 = email.slice(2, 7);
-    const part3 = email.slice(7, 11);
-
-    return `(${part1}) ${part2}-${part3}`;
   }
 
   function handleChange(

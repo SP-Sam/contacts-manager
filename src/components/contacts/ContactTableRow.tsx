@@ -6,6 +6,7 @@ import { deleteContact } from '../../utils/fetchContacts';
 import edit from '/assets/edit.svg';
 import trash from '/assets/trash.svg';
 import { useNavigate } from 'react-router-dom';
+import { formatMobile } from '../../utils/formatMobile';
 
 interface Props {
   contact: IContact;
@@ -49,7 +50,7 @@ export function ContactTableRow({
     <tr className={`text-neutral-dark ${bg}`}>
       <td className="text-primary-medium font-extrabold pl-8">{id}</td>
       <td className="pl-12">{name}</td>
-      <td className="pl-12">{mobile}</td>
+      <td className="pl-12">{formatMobile(mobile)}</td>
       <td className="pl-12">{email}</td>
       <td className="flex py-4 pl-12">
         <button
