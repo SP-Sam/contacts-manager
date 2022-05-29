@@ -2,9 +2,9 @@ import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ContactsTable } from '../components/contacts/ContactsTable';
 import { Header } from '../components/Header';
-import { ContactsContext } from '../context/UserContext';
+import { ContactsContext } from '../context/ContactsContext';
 import { getContacts } from '../utils/fetchContacts';
-import { getLocalStorage } from './manageLocalStorage';
+import { getLocalStorage } from '../utils/manageLocalStorage';
 
 export function ContactsPage() {
   const navigate = useNavigate();

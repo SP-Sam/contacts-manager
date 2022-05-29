@@ -19,6 +19,14 @@ export async function createContact(newContact: INewContact, token: string) {
   }).then(res => res.data);
 }
 
+export async function updateContact(id: number, toEdit: INewContact, token: string) {
+  return axios.put(`${CONTACTS_ENDPOINT}/${id}`, toEdit, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }).then(res => res.data);
+}
+
 export async function deleteContact(id: number, token: string) {
   return axios.delete(`${CONTACTS_ENDPOINT}/${id}`, {
     headers: {

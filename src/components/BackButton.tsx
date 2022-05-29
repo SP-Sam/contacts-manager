@@ -11,7 +11,7 @@ export function BackButton() {
       navigate('/');
     } else if (
       location.pathname === '/contacts/create' ||
-      location.pathname === '/contacts/update'
+      location.pathname === '/contacts/edit'
     ) {
       navigate('/contacts');
     }

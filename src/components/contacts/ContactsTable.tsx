@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ContactsContext } from '../../context/UserContext';
+import { ContactsContext } from '../../context/ContactsContext';
 import { ContactTableRow } from './ContactTableRow';
 import chevronDown from '/assets/chevron-down.svg';
 

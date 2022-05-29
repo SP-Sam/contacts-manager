@@ -15,8 +15,8 @@ function App() {
           element={<ChangeContacts operation="create" />}
         />
         <Route
-          path="/contacts/update"
-          element={<ChangeContacts operation="update" />}
+          path="/contacts/edit"
+          element={<ChangeContacts operation="edit" />}
         />
       </Routes>
     </div>

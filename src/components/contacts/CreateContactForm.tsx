@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getLocalStorage } from '../../pages/manageLocalStorage';
+import { getLocalStorage } from '../../utils/manageLocalStorage';
 import { createContact } from '../../utils/fetchContacts';
 import { SubmitButton } from '../SubmitButton';
 
