@@ -47,7 +47,7 @@ export function LoginForm() {
       <label htmlFor="email-input" className="flex flex-col font-extrabold">
         Email
         <input
-          type="text"
+          type="email"
           value={email}
           onChange={({ target: { value } }) => handleChange('email', value)}
           id="email-input"
@@ -70,9 +70,11 @@ export function LoginForm() {
           className="bg-neutral-light pl-2 py-3 text-neutral-dark rounded-lg focus:outline-none focus:ring focus:ring-gray-300"
         />
       </label>
+
       {invalidCredentials && (
         <span className="text-orange-600 mt-1.5">Credenciais inválidas</span>
       )}
+
       <SubmitButton isDisabled={isButtonDisabled}>Fazer login</SubmitButton>
     </form>
   );
