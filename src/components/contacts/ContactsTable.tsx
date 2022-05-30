@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ContactsContext } from '../../context/ContactsContext';
 import { ContactTableRow } from './ContactTableRow';
-import chevronDown from '/assets/chevron-down.svg';
+import chevronDown from '../../assets/chevron-down.svg';
 
 export function ContactsTable() {
   const { contacts } = useContext(ContactsContext);
@@ -22,7 +22,7 @@ export function ContactsTable() {
           </th>
           <th scope="col" className="pl-12">
             <span className="flex">
-              Name
+              Nome
               <img
                 src={chevronDown}
                 alt="Seta para baixo"

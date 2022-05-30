@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import arrowLeft from '/assets/arrow-left.svg';
+import arrowLeft from '../assets/arrow-left.svg';
 
 export function BackButton() {
   const location = useLocation();

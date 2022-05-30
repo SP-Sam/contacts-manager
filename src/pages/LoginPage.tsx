@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { LoginForm } from '../components/login/LoginForm';
-import loginImage from '/assets/login-image.svg';
+import loginImage from '../assets/login-image.svg';
 
 export function LoginPage() {
   useEffect(() => {

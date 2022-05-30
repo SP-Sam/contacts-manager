@@ -3,8 +3,8 @@ import { ContactsContext } from '../../context/ContactsContext';
 import { IContact } from '../../interfaces/ContactsInterfaces';
 import { getLocalStorage } from '../../utils/manageLocalStorage';
 import { deleteContact } from '../../utils/fetchContacts';
-import edit from '/assets/edit.svg';
-import trash from '/assets/trash.svg';
+import edit from '../../assets/edit.svg';
+import trash from '../../assets/trash.svg';
 import { useNavigate } from 'react-router-dom';
 import { formatMobile } from '../../utils/formatMobile';
 

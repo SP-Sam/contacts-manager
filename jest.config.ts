@@ -176,6 +176,7 @@ export default {
 
   // A map from regular expressions to paths to transformers
   transform: {
+    "^.+\\.svg$": "<rootDir>/src/tests/fileTransformer.js",
     "^.+\\.(t|j)sx?$": [
       "@swc/jest",
       {
