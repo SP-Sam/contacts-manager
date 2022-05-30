@@ -3,7 +3,7 @@
 
 > O Contacts Manager é uma aplicação web Front-end que te ajuda a gerenciar sua lista de contatos.
 
-## É possível
+## Funcionalidades
 * Ver sua lista de contatos cadastrados
 * Adicionar novos contatos
   <img src="./src/assets/create-contacts-page.png" alt="Home page">
@@ -11,6 +11,8 @@
   <img src="./src/assets/edit-contact-page.png" alt="Home page">
 * Excluir um contato da lista
 
+## [Protótipo do projeto](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A2)
+## [Ícones utilizados no projeto](https://feathericons.com/)
 ## Tecnologias utilizadas
 * [Vite](https://vitejs.dev/)
 * [React](https://pt-br.reactjs.org/) (Hooks e Context)
@@ -44,11 +46,46 @@ cd contacts-manager
 ```bash
 npm install
 ```
-#### 4º Inicie o processo de build do projeto
+#### 4º Inicie o processo de build do projeto e aguarde até estar finalizado
 ```bash
 npm run build
 ```
-#### 5º Execute o projeto
+#### Você verá algo parecido com isso no terminal
+<img src="./src/assets/build-demo.png" alt="Home page">
+
+#### 5º Inicie o projeto
 ```bash
-npm run preview
+npm start
 ```
+#### Você verá algo parecido com isso no terminal
+<img src="./src/assets/start-demo.png" alt="Home page">
+
+#### É só dar um `Ctrl+Click` no link ou colar `http://localhost:4173` no seu navegador e começar a usar!
+
+## Fazendo login no Contacts Manager
+### Para fazer login na aplicação utilize as credenciais abaixo:
+#### Email: `user@diwe.com.br`
+#### Senha: `Mob20we23##`
+
+## Executando os testes do projeto
+O Contacts Manager possui testes unitários. Para executa-los abra um terminal na raiz do projeto e rode o seguinte comando:
+```bash
+npm test
+```
+#### Você verá algo parecido com isso no terminal
+<img src="./src/assets/tests-demo.png" alt="">
+
+#### os testes serão executados no `watch mode` do Jest. Para sair do `watch mode` basta apertar a tecla `q` ou `Ctrl+C`.
+
+## Desenvolvedor
+<a href="https://www.linkedin.com/in/spsam/">
+  <img src="https://avatars.githubusercontent.com/u/72403810?v=4" width="100px" alt="Imagem de Samuel Pereira">
+  <br>
+  <b>Samuel Pereira</b>
+</a>
+
+## Licença
+Este projeto é um desafio técnico para um processo seletivo da empresa [DIWE](https://diwe.com.br/), não possui fins lucrativos e não está licenciado.
+
+[⬆️ Voltar ao topo](#contacts-manager)
+<br>
