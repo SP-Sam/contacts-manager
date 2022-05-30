@@ -7,7 +7,7 @@ interface Props {
   operation: 'create' | 'edit';
 }
 
-export function ChangeContacts({ operation }: Props) {
+export function ChangeContactsPage({ operation }: Props) {
   useEffect(() => {
     if (operation === 'create') {
       document.title = 'Cadastrar contato | Contacts Manager';

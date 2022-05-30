@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { ChangeContacts } from './pages/ChangeContacts';
+import { ChangeContactsPage } from './pages/ChangeContactsPage';
 import { ContactsPage } from './pages/ContactsPage';
 import { LoginPage } from './pages/LoginPage';
 
@@ -12,11 +12,11 @@ function App() {
         <Route path="/contacts" element={<ContactsPage />} />
         <Route
           path="contacts/create"
-          element={<ChangeContacts operation="create" />}
+          element={<ChangeContactsPage operation="create" />}
         />
         <Route
           path="/contacts/edit"
-          element={<ChangeContacts operation="edit" />}
+          element={<ChangeContactsPage operation="edit" />}
         />
       </Routes>
     </div>
