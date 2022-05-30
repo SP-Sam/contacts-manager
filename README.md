@@ -63,6 +63,8 @@ npm start
 #### É só dar um `Ctrl+Click` no link ou colar `http://localhost:4173` no seu navegador e começar a usar!
 
 ## Fazendo login no Contacts Manager
+<img src="./src/assets/login-page.png" alt="Home page">
+
 ### Para fazer login na aplicação utilize as credenciais abaixo:
 #### Email: `user@diwe.com.br`
 #### Senha: `Mob20we23##`
