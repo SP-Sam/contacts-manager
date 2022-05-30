@@ -12,6 +12,7 @@ export function ContactsPage() {
 
   useEffect(() => {
     document.title = 'Contacts Manager';
+
     const tokenData = getLocalStorage('tokenData');
 
     if (tokenData) {

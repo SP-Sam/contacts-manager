@@ -3,11 +3,11 @@ import { CreateContactForm } from '../components/contacts/CreateContactForm';
 import { EditContactForm } from '../components/contacts/EditContactForm';
 import { Header } from '../components/Header';
 
-interface Props {
+type Props = {
   operation: 'create' | 'edit';
-}
+};
 
-export function ChangeContactsPage({ operation }: Props) {
+export function ManageContactsPage({ operation }: Props) {
   useEffect(() => {
     if (operation === 'create') {
       document.title = 'Cadastrar contato | Contacts Manager';
@@ -30,6 +30,7 @@ export function ChangeContactsPage({ operation }: Props) {
               Preencha as informações para cadastrar um novo contato
             </p>
           </div>
+
           <CreateContactForm />
         </div>
       )}
@@ -44,6 +45,7 @@ export function ChangeContactsPage({ operation }: Props) {
               Altere as informações para editar o contato
             </p>
           </div>
+
           <EditContactForm />
         </div>
       )}

@@ -27,6 +27,18 @@ export function CreateContactForm() {
     return emailRegex.test(email);
   }
 
+  function handleChange(
+    flag: 'name' | 'email' | 'mobile',
+    value: string,
+  ): void {
+    if (flag === 'name') setContactName(value);
+    if (flag === 'email') setContactEmail(value);
+    if (flag === 'mobile') {
+      if (Number(value) < 1) setContactMobile('');
+      else setContactMobile(value);
+    }
+  }
+
   function handleSubmit() {
     const newContact = {
       name: contactName,
@@ -44,19 +56,7 @@ export function CreateContactForm() {
         setContactEmail('');
         setContactMobile('');
       })
-      .catch(err => console.log(err));
-  }
-
-  function handleChange(
-    flag: 'name' | 'email' | 'mobile',
-    value: string,
-  ): void {
-    if (flag === 'name') setContactName(value);
-    if (flag === 'email') setContactEmail(value);
-    if (flag === 'mobile') {
-      if (Number(value) < 1) setContactMobile('');
-      else setContactMobile(value);
-    }
+      .catch(err => console.error(err));
   }
 
   return (

@@ -55,6 +55,7 @@ export function ContactsTable() {
           </th>
         </tr>
       </thead>
+
       <tbody>
         {contacts.map((contact, i) => {
           return <ContactTableRow key={contact.id} contact={contact} i={i} />;

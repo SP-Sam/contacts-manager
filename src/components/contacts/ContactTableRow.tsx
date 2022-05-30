@@ -1,23 +1,24 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ContactsContext } from '../../context/ContactsContext';
 import { IContact } from '../../interfaces/ContactsInterfaces';
 import { getLocalStorage } from '../../utils/manageLocalStorage';
 import { deleteContact } from '../../utils/fetchContacts';
+import { formatMobile } from '../../utils/formatMobile';
 import edit from '../../assets/edit.svg';
 import trash from '../../assets/trash.svg';
-import { useNavigate } from 'react-router-dom';
-import { formatMobile } from '../../utils/formatMobile';
 
-interface Props {
+type Props = {
   contact: IContact;
   i: number;
-}
+};
 
 export function ContactTableRow({
   contact: { id, name, mobile, email },
   i,
 }: Props) {
   const bg = i % 2 === 0 ? 'bg-neutral-light' : 'bg-white';
+
   const { contacts, setContacts, setContactToEdit } =
     useContext(ContactsContext);
 
@@ -32,7 +33,7 @@ export function ContactTableRow({
 
         setContacts(newContacts);
       })
-      .catch(err => console.log(err));
+      .catch(err => console.error(err));
   }
 
   function createContactToEdit() {

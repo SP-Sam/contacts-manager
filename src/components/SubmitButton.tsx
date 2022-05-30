@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-interface Props {
+type Props = {
   children: ReactNode;
   isDisabled: boolean;
-}
+};
 
 export function SubmitButton({ children, isDisabled }: Props) {
   return (

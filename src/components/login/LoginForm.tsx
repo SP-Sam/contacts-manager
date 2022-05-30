@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IUserCredentials } from '../../interfaces/UserCredentials';
 import { login } from '../../utils/fetchLogin';
@@ -17,15 +17,14 @@ export function LoginForm() {
     else setIsButtonDisabled(false);
   }, [email, password]);
 
-  function handleChange(flag: 'email' | 'password', value: string): void {
+  function handleChange(flag: 'email' | 'password', value: string) {
     setInvalidCredentials(false);
+
     if (flag === 'email') setEmail(value);
     if (flag === 'password') setPassword(value);
   }
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-
+  function handleSubmit() {
     const userCredentials: IUserCredentials = {
       email,
       password,
@@ -41,7 +40,10 @@ export function LoginForm() {
 
   return (
     <form
-      onSubmit={e => handleSubmit(e)}
+      onSubmit={e => {
+        e.preventDefault();
+        handleSubmit();
+      }}
       className="flex flex-col text-primary-dark p-3 w-11/12 mt-5 max-w-lg"
     >
       <label htmlFor="email-input" className="flex flex-col font-extrabold">
@@ -49,7 +51,7 @@ export function LoginForm() {
         <input
           type="email"
           value={email}
-          onChange={({ target: { value } }) => handleChange('email', value)}
+          onChange={e => handleChange('email', e.target.value)}
           id="email-input"
           placeholder="Digite seu email"
           className="bg-neutral-light pl-2 py-3 text-neutral-dark rounded-lg focus:outline-none focus:ring focus:ring-gray-300"
@@ -64,7 +66,7 @@ export function LoginForm() {
         <input
           type="password"
           value={password}
-          onChange={({ target: { value } }) => handleChange('password', value)}
+          onChange={e => handleChange('password', e.target.value)}
           id="password-input"
           placeholder="Digite sua senha"
           className="bg-neutral-light pl-2 py-3 text-neutral-dark rounded-lg focus:outline-none focus:ring focus:ring-gray-300"
